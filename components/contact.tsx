@@ -12,29 +12,40 @@ export function Contact() {
           <div className="space-y-8">
             <p className="text-gray-600 leading-relaxed font-light">{siteContent.contact.description}</p>
 
-            <div className="space-y-4">
-              <div>
+            <div className="space-y-2">
+              <p>
+                <span className="text-gray-600 font-light">Email: </span>
                 <a
                   href={`mailto:${siteContent.personal.email}`}
                   className="text-gray-900 hover:text-gray-600 transition-colors border-b border-gray-900 hover:border-gray-600 pb-1"
                 >
                   {siteContent.personal.email}
                 </a>
-              </div>
+              </p>
 
-              <div className="flex space-x-8">
-                {siteContent.contact.socialLinks.map((link, index) => (
-                  <a
-                    key={index}
-                    href={link.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-sm text-gray-600 hover:text-gray-900 transition-colors"
-                  >
-                    {link.label}
-                  </a>
-                ))}
-              </div>
+              <p>
+                <span className="text-gray-600 font-light">LinkedIn: </span>
+                <a
+                  href={siteContent.personal.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-900 hover:text-gray-600 transition-colors border-b border-gray-900 hover:border-gray-600 pb-1"
+                >
+                  {siteContent.personal.linkedin.replace("https://", "")}
+                </a>
+              </p>
+
+              <p>
+                <span className="text-gray-600 font-light">GitHub: </span>
+                <a
+                  href={siteContent.personal.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-900 hover:text-gray-600 transition-colors border-b border-gray-900 hover:border-gray-600 pb-1"
+                >
+                  {siteContent.personal.github.replace("https://", "")}
+                </a>
+              </p>
             </div>
           </div>
         </div>
