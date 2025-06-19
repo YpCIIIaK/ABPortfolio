@@ -1,5 +1,4 @@
 import { ExternalLink, Github } from "lucide-react"
-import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 
 export function Projects() {
@@ -69,15 +68,21 @@ export function Projects() {
                     ))}
                   </div>
 
-                  <div className="flex gap-3">
-                    <Button variant="outline" size="sm" className="flex-1">
-                      <ExternalLink size={16} className="mr-2" />
+                  <div className="flex gap-6">
+                    <a
+                      href={project.liveUrl}
+                      className="inline-flex items-center text-sm text-gray-900 border-b border-gray-900 pb-1 hover:border-gray-600 hover:text-gray-600 transition-colors"
+                    >
+                      <ExternalLink size={14} className="mr-2" />
                       Live Demo
-                    </Button>
-                    <Button variant="outline" size="sm" className="flex-1">
-                      <Github size={16} className="mr-2" />
+                    </a>
+                    <a
+                      href={project.githubUrl}
+                      className="inline-flex items-center text-sm text-gray-900 border-b border-gray-900 pb-1 hover:border-gray-600 hover:text-gray-600 transition-colors"
+                    >
+                      <Github size={14} className="mr-2" />
                       Code
-                    </Button>
+                    </a>
                   </div>
                 </div>
               </CardContent>

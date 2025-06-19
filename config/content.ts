@@ -139,6 +139,7 @@ export const siteContent = {
   buttons: {
     viewResearch: "View research work",
     viewAllProjects: "View all projects",
+    getInTouch: "Get in touch",
   },
 
   // Мета-информация для SEO

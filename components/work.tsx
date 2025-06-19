@@ -1,3 +1,5 @@
+import { siteContent } from "@/config/content"
+
 export function Work() {
   const projects = [
     {
@@ -67,9 +69,9 @@ export function Work() {
             <div className="pt-8">
               <a
                 href="#"
-                className="inline-block text-sm text-gray-900 border-b border-gray-900 pb-1 hover:border-gray-600 transition-colors"
+                className="inline-block text-sm text-gray-900 border-b border-gray-900 pb-1 hover:border-gray-600 hover:text-gray-600 transition-colors"
               >
-                View all projects
+                {siteContent.buttons.viewAllProjects}
               </a>
             </div>
           </div>
