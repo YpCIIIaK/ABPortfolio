@@ -1,26 +1,14 @@
+import { siteContent } from "@/config/content"
+
 export function Experience() {
-  const experiences = [
-    {
-      title: "Research Assistant",
-      organization: "NCSU - Dr. Chen's Lab",
-      period: "Jan 2025 - Present",
-      description:
-        "ML models for quantum computer designs, multi-element systems, model optimization, cross-validation",
-    },
-    {
-      title: "Research Assistant",
-      organization: "NCSU - Roederer Group",
-      period: "Jan 2023 - Present",
-      description: "Spectrum synthesis, MOOG & Python, NLTE corrections, data analysis for metal-poor stars",
-    },
-  ]
+  const experiences = siteContent.experience.positions
 
   return (
     <section id="experience" className="py-24 px-8">
       <div className="max-w-4xl mx-auto">
         <div className="grid md:grid-cols-2 gap-16">
           <div>
-            <h2 className="text-3xl font-light text-gray-900 mb-8">Experience</h2>
+            <h2 className="text-3xl font-light text-gray-900 mb-8">{siteContent.experience.title}</h2>
           </div>
 
           <div className="space-y-8">

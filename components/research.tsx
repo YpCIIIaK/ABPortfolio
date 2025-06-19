@@ -1,30 +1,14 @@
+import { siteContent } from "@/config/content"
+
 export function Research() {
-  const projects = [
-    {
-      title: "Machine Learning for Superconducting Qubit Hardware Design Automation",
-      institution: "NCSU - Dr. Chen's Lab",
-      period: "Jan 2025 - Present",
-      description:
-        "Refining ML models for multi-qubit superconducting systems and inverse design. Utilizing MLP and INN, expanding datasets, analyzing correlations, training for inverse design.",
-      impact: "Potential impact: scalable quantum hardware solutions",
-      current: true,
-    },
-    {
-      title: "Quantum Perlin Noise Game",
-      institution: "Personal Project",
-      period: "2024",
-      description: "2D game with quantum-generated Perlin noise for procedural terrain generation.",
-      technologies: "Python, Quantum Computing, Game Development",
-      current: false,
-    },
-  ]
+  const projects = siteContent.research.projects
 
   return (
     <section id="research" className="py-24 px-8">
       <div className="max-w-4xl mx-auto">
         <div className="grid md:grid-cols-2 gap-16">
           <div>
-            <h2 className="text-3xl font-light text-gray-900 mb-8">Research & Projects</h2>
+            <h2 className="text-3xl font-light text-gray-900 mb-8">{siteContent.research.title}</h2>
           </div>
 
           <div className="space-y-12">

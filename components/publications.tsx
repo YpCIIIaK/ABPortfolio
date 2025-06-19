@@ -1,31 +1,14 @@
+import { siteContent } from "@/config/content"
+
 export function Publications() {
-  const publications = [
-    {
-      title: "Quantum Error Mitigation Techniques for Near-Term Quantum Devices",
-      journal: "Journal of Quantum Information Science",
-      year: "2023",
-      authors: "A. Akchurin, I. Petrov, S. Sidorov",
-    },
-    {
-      title: "Implementing Shor's Algorithm on a Superconducting Quantum Processor",
-      journal: "Physical Review Letters",
-      year: "2022",
-      authors: "A. Akchurin, M. Ivanova",
-    },
-    {
-      title: "Quantum Machine Learning: Challenges and Opportunities",
-      journal: "Quantum Computing Review",
-      year: "2021",
-      authors: "A. Akchurin",
-    },
-  ]
+  const publications = siteContent.publications.papers
 
   return (
     <section id="publications" className="py-24 px-8">
       <div className="max-w-4xl mx-auto">
         <div className="grid md:grid-cols-2 gap-16">
           <div>
-            <h2 className="text-3xl font-light text-gray-900 mb-8">Publications</h2>
+            <h2 className="text-3xl font-light text-gray-900 mb-8">{siteContent.publications.title}</h2>
           </div>
 
           <div className="space-y-8">
