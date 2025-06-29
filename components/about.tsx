@@ -4,8 +4,8 @@ import { siteContent } from "@/config/content"
 import { useInView } from "@/lib/animations"
 
 export function About() {
-  const [titleRef, titleInView] = useInView(0.3)
-  const [contentRef, contentInView] = useInView(0.3)
+  const [titleRef, titleInView] = useInView(0.1)
+  const [contentRef, contentInView] = useInView(0.1)
 
   return (
     <section id="about" className="py-24 px-8">

@@ -4,10 +4,10 @@ import { siteContent } from "@/config/content";
 import { useInView } from "@/lib/animations";
 
 export function Hero() {
-  const [titleRef, titleInView] = useInView(0.2);
-  const [subtitleRef, subtitleInView] = useInView(0.2);
-  const [buttonsRef, buttonsInView] = useInView(0.2);
-  const [imageRef, imageInView] = useInView(0.2);
+  const [titleRef, titleInView] = useInView(0.1);
+  const [subtitleRef, subtitleInView] = useInView(0.1);
+  const [buttonsRef, buttonsInView] = useInView(0.1);
+  const [imageRef, imageInView] = useInView(0.1);
 
   return (
     <section className="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 relative">

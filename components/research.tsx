@@ -1,22 +1,45 @@
+"use client"
+
 import { siteContent } from "@/config/content"
+import { useInView } from "@/lib/animations"
 
 export function Research() {
   const projects = siteContent.research.projects
+  const [titleRef, titleInView] = useInView(0.1)
+  const [projectsRef, projectsInView] = useInView(0.1)
 
   return (
     <section id="research" className="py-24 px-8">
       <div className="max-w-5xl mx-auto">
         <div className="grid md:grid-cols-2 gap-16">
-          <div>
+          <div
+            ref={titleRef}
+            className={`transition-all duration-1000 ease-out ${
+              titleInView
+                ? "opacity-100 translate-x-0"
+                : "opacity-0 -translate-x-16"
+            }`}
+          >
             <h2 className="text-3xl font-light text-gray-900 mb-8">{siteContent.research.title}</h2>
           </div>
 
-          <div className="space-y-12">
+          <div
+            ref={projectsRef}
+            className="space-y-12"
+          >
             {projects.map((project, index) => (
-              <div key={index} className="space-y-3">
+              <div
+                key={index}
+                className={`space-y-3 transition-all duration-1000 ease-out ${
+                  projectsInView
+                    ? "opacity-100 translate-x-0"
+                    : "opacity-0 translate-x-16"
+                }`}
+                style={{ transitionDelay: `${index * 150}ms` }}
+              >
                 <div className="flex justify-between items-start">
                   <h3 className="text-lg font-medium text-gray-900 leading-tight max-w-sm">{project.title}</h3>
-                  <span className="text-sm text-gray-500 font-light">{project.period}</span>
+                  <span className="text-sm text-gray-500 font-light whitespace-nowrap">{project.period}</span>
                 </div>
 
                 <p className="text-sm text-gray-600 font-medium">{project.institution}</p>

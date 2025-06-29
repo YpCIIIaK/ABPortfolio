@@ -4,8 +4,8 @@ import { siteContent } from "@/config/content"
 import { useInView } from "@/lib/animations"
 
 export function Experience() {
-  const [titleRef, titleInView] = useInView(0.3)
-  const [experiencesRef, experiencesInView] = useInView(0.3)
+  const [titleRef, titleInView] = useInView(0.1)
+  const [experiencesRef, experiencesInView] = useInView(0.1)
 
   const experiences = siteContent.experience.positions
 

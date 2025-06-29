@@ -5,12 +5,12 @@ import { useInView } from "@/lib/animations"
 import { Mail, Github, Linkedin } from "lucide-react"
 
 export function Contact() {
-  const [titleRef, titleInView] = useInView(0.3)
-  const [contentRef, contentInView] = useInView(0.3)
+  const [titleRef, titleInView] = useInView(0.1)
+  const [contentRef, contentInView] = useInView(0.1)
 
   return (
     <section id="contact" className="py-24 px-8">
-      <div className="max-w-4xl mx-auto">
+      <div className="max-w-5xl mx-auto">
         <div className="grid md:grid-cols-2 gap-16">
           <div
             ref={titleRef}
