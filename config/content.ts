@@ -85,6 +85,7 @@ export const siteContent = {
         description:
           "Developed a 2D game incorporating quantum-generated Perlin noise for procedural terrain generation.",
         technologies: "Python, Quantum Computing, Game Development",
+        videoUrl: "/zelda.mp4",
         current: false,
       },
     ],

@@ -5,7 +5,7 @@ export function Research() {
 
   return (
     <section id="research" className="py-24 px-8">
-      <div className="max-w-4xl mx-auto">
+      <div className="max-w-5xl mx-auto">
         <div className="grid md:grid-cols-2 gap-16">
           <div>
             <h2 className="text-3xl font-light text-gray-900 mb-8">{siteContent.research.title}</h2>
@@ -26,6 +26,15 @@ export function Research() {
                 {project.impact && <p className="text-sm text-gray-600 font-light italic">{project.impact}</p>}
 
                 {project.technologies && <p className="text-xs text-gray-500 font-light">{project.technologies}</p>}
+                
+                {project.videoUrl && (
+                  <div className="mt-4">
+                    <video controls className="w-full rounded-lg">
+                      <source src={project.videoUrl} type="video/mp4" />
+                      Your browser does not support the video tag.
+                    </video>
+                  </div>
+                )}
               </div>
             ))}
           </div>

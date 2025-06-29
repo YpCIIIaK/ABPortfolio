@@ -1,4 +1,3 @@
-
 "use client"
 
 import { siteContent } from "@/config/content"
@@ -12,7 +11,7 @@ export function Experience() {
 
   return (
     <section id="experience" className="py-24 px-8">
-      <div className="max-w-4xl mx-auto">
+      <div className="max-w-5xl mx-auto">
         <div className="grid md:grid-cols-2 gap-16">
           <div
             ref={titleRef}
@@ -41,7 +40,9 @@ export function Experience() {
               >
                 <div className="flex justify-between items-start">
                   <h3 className="text-lg font-medium text-gray-900">{exp.title}</h3>
-                  <span className="text-sm text-gray-500 font-light">{exp.period}</span>
+                  <div className="ml-4">
+                    <span className="text-sm text-gray-500 font-light whitespace-nowrap">{exp.period}</span>
+                  </div>
                 </div>
 
                 <p className="text-sm text-gray-600 font-medium">{exp.organization}</p>
